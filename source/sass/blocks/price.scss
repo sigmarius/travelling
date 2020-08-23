@@ -1,0 +1,115 @@
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__wrapper {
+  order: 1;
+}
+
+.price__title {
+  @include clear-intervals(53px);
+  @include font(55px, 90px, 0);
+  font-weight: 600;
+  color: $grey;
+}
+
+.price__list {
+  @include clear-intervals(138px);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.price__item {
+  width: 370px;
+  min-height: 672px;
+  padding: 40px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid $light-opacity;
+  border-radius: 6px;
+  background-color: $white;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &--active {
+    border: 1px solid $accent;
+
+    .price__item-title {
+      letter-spacing: 0;
+      color: $accent;
+    }
+
+    .price__item-text::after {
+      background-color: $accent;
+      opacity: 0.5;
+    }
+
+    .price__item-item:first-of-type {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.price__item-title {
+  @include clear-intervals(40px);
+  @include font(28px, 34px, -1.27px);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: $text-grey;
+}
+
+.price__item-text {
+  @include clear-intervals(60px);
+  @include font(16px, 24px, 0);
+  position: relative;
+  padding-right: 20px;
+  color: $grey;
+
+  &::after {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 310px;
+    height: 1px;
+    content: "";
+    background-color: $light-opacity;
+  }
+}
+
+.price__item-list {
+  @include clear-intervals(0);
+  list-style: none;
+}
+
+.price__item-item {
+  @include font(16px, 32px, 0);
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 12px;
+    content: "\2713";
+    color: $accent;
+  }
+}
+
+.price__item-button {
+  width: 310px;
+  padding: 30px;
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}

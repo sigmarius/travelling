@@ -12,13 +12,7 @@
   color: $grey;
 
   &::after {
-    position: absolute;
-    top: 190px;
-    left: 0;
-    width: 229px;
-    height: 4px;
-    background-color: $accent;
-    content: "";
+    @include head-line(190px, 229px, 4px);
   }
 }
 
@@ -93,7 +87,7 @@
     top: 40px;
     left: 0;
     width: 900px;
-    height: 1px;
+    height: 2px;
     background-color: $light-opacity;
     content: "";
   }
@@ -109,4 +103,116 @@
   &--active {
     color: $accent;
   }
+}
+
+.places__description-list {
+  @include clear-intervals(236px);
+  position: relative;
+  list-style: none;
+
+  &::after {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    z-index: -1;
+    width: 1444px;
+    height: 1090px;
+    content: url("../img/places-back.svg");
+    transform: translateX(-50%);
+  }
+}
+
+.places__description-item {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    display: none;
+  }
+}
+
+.places__description-wrapper {
+  width: 50%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.places__description-title {
+  @include clear-intervals(48px);
+  @include font(55px, 90px, -1.25px);
+  font-weight: 600;
+  color: $grey;
+
+  &::after {
+    @include head-line(115px, 175px, 3px);
+  }
+}
+
+.places__description-text {
+  @include clear-intervals(50px);
+  @include font(16px, 28px, -0.47px);
+  padding-right: 80px;
+  color: $opacity-grey;
+}
+
+.places__description-button {
+  width: 250px;
+  padding: 30px 20px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.places__reviews {
+  @include clear-intervals(0);
+  position: absolute;
+  right: 0;
+  top: 17%;
+  width: 382px;
+  padding: 40px 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $white;
+}
+
+.places__reviews-title {
+  @include clear-intervals(35px);
+  @include font(30px, 37px, -0.69px);
+  position: relative;
+  font-weight: 500;
+  color: $grey;
+
+  &::after {
+    @include head-line(50px, 68px, 1px);
+  }
+}
+
+.places__reviews-text {
+  @include clear-intervals(32px);
+  @include font(14px, 28px, -0.41px);
+  color: $opacity-grey;
+}
+
+.places__reviews-user {
+  @include clear-intervals(0);
+  display: flex;
+  align-items: center;
+}
+
+.places__reviews-image {
+  width: 42px;
+  height: 38px;
+  margin-right: 12px;
+}
+
+.places__reviews-name {
+  @include clear-intervals(0);
+  @include font(16px, 24px, -1.17px);
+  font-weight: 500;
+  font-style: normal;
+  color: $grey;
 }

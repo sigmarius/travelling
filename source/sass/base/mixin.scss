@@ -9,3 +9,13 @@
   line-height: $line-height;
   letter-spacing: $letter-spacing;
 }
+
+@mixin head-line ($top, $width, $height) {
+  position: absolute;
+  left: 0;
+  top: $top;
+  width: $width;
+  height: $height;
+  content: "";
+  background-color: $accent;
+}
