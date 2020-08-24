@@ -29,7 +29,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
@@ -37,24 +37,18 @@
 .places__preview-item {
   @include clear-intervals(95px);
 
-  margin-right: 60px;
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
   &:nth-last-child(2) {
+    margin-left: auto;
     margin-right: 120px;
   }
 
   &:last-child {
-    margin-right: 0;
+    margin-right: auto;
   }
 }
 
 .places__preview-figure {
   @include clear-intervals(0);
-
   position: relative;
 }
 
@@ -71,6 +65,11 @@
   color: $grey;
   background-color: $white;
   transform: translateX(-50%);
+}
+
+.places__preview-image {
+  width: 350px;
+  height: 430px;
 }
 
 .places__navigation-list {
@@ -215,4 +214,118 @@
   font-weight: 500;
   font-style: normal;
   color: $grey;
+}
+
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .places {
+    padding-top: 80px;
+  }
+
+  .places__title {
+    @include font(30px, 45px, 0);
+    width: auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__slogan {
+    @include font(16px, 28px, -0.47px);
+    width: 350px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  .places__preview-list {
+    margin: 0 82px 93px;
+  }
+
+  .places__preview-item {
+    margin-bottom: 21px;
+
+    &:nth-last-child(2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin: auto;
+    }
+  }
+
+  .places__preview-image {
+    width: 288px;
+    height: auto;
+  }
+
+  .places__navigation-list {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-left: 37px;
+    padding-right: 26px;
+
+    &::after {
+      left: 37px;
+      width: 95%;
+    }
+  }
+
+  .places__navigation-item:last-child {
+    display: none;
+  }
+
+  .places__description-list {
+    margin-bottom: 108px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__description-item {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .places__description-wrapper {
+    width: 100%;
+  }
+
+  .places__description-title {
+    @include font(30px, 45px, 0);
+    margin-bottom: 20px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__description-text {
+    margin-bottom: 20px;
+    padding: 0 21px;
+    text-align: center;
+  }
+
+  .places__description-button {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 17px 20px;
+  }
+
+  .places__description-image {
+    min-width: 768px;
+    height: auto;
+  }
+
+  .places__reviews {
+    top: auto;
+    bottom: -4px;
+    left: 50%;
+    padding: 25px 30px 0;
+    transform: translateX(-50%);
+  }
 }

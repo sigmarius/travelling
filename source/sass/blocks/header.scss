@@ -35,3 +35,25 @@
   text-decoration: underline;
   color: $accent;
 }
+
+.header__contacts-icon {
+  stroke: $accent;
+  fill: none;
+}
+
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .header__logo {
+    width: 44px;
+    height: 17px;
+  }
+
+  .header__nav {
+    min-height: 50px;
+    padding-left: 21px;
+  }
+
+  .header__menu,
+  .header__contacts {
+    display: none;
+  }
+}

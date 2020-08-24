@@ -13,8 +13,13 @@
 }
 
 .footer__promo {
+  position: relative;
   width: 33.33%;
   padding-left: 13px;
+
+  &::after {
+    @include grey-line;
+  }
 }
 
 .footer__promo-wrapper {
@@ -37,18 +42,24 @@
 }
 
 .footer__contacts {
+  position: relative;
   width: 33.33%;
   padding-left: 100px;
+
+  &::after {
+    @include grey-line;
+  }
 }
 
 .footer__contacts-list {
   @include clear-intervals(0);
-  padding-left: 42px;
   list-style: none;
 }
 
 .footer__contacts-item {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .footer__contacts-link {
@@ -58,6 +69,16 @@
 
   &--phone {
     @include font(16px, 32px, 0);
+  }
+}
+
+.footer__contacts-icon {
+  margin-right: 15px;
+  fill: $icon-color;
+
+  &--phone {
+    fill: none;
+    stroke: $icon-color;
   }
 }
 

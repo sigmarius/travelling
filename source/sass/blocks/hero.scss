@@ -1,5 +1,6 @@
 .hero {
   min-height: 860px;
+  min-width: $desktop-max;
   padding-top: 185px;
 
   color: $white;
@@ -16,7 +17,7 @@
 }
 
 .hero__wrapper {
-  width: 35%;
+  width: 37%;
   margin-left: auto;
   margin-right: 5%;
   display: flex;
@@ -33,7 +34,7 @@
 .hero__slogan {
   @include clear-intervals(39px);
   @include font(16px, 27px, -0.47px);
-  padding-right: 20px;
+  padding-right: 50px;
   text-align: left;
 }
 
@@ -55,11 +56,42 @@
 @media (min-width: $tablet-min) and (max-width: $tablet-max) {
   .hero {
     min-height: 344px;
+    min-width: $tablet-min;
+    padding-top: 60px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
+    }
+  }
+
+  .hero__wrapper {
+    width: 57%;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    @include font(30px, 45px, 0);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .hero__slogan {
+    margin-bottom: 12px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .hero__button {
+    width: 250px;
+    margin: 0 auto;
+    padding: 17px 40px;
+    display: block;
+
+    &::after {
+      top: 13px;
+      font-size: 30px;
     }
   }
 }

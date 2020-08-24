@@ -40,9 +40,12 @@
 </head>
 <body>
 
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
   <header class="header">
-    <div class="wrapper">
-      <nav class="header__nav">
+      <nav class="header__nav wrapper">
         <a class="header__logo">
           <img class="header__logo-image" src="img/logo.svg" width="57" height="22" alt="Логотип проекта Путешествие по Европе">
         </a>
@@ -54,9 +57,14 @@
             <a class="header__menu-link header__menu-link--active" href="#">Цены</a>
           </li>
         </ul>
-        <a class="header__phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        <div class="header__contacts">
+          <a class="header__phone" href="tel:+749978468446">
+            <svg class="header__contacts-icon" width="30" height="30">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            +7 (499) -784-684-46</a>
+        </div>
       </nav>
-    </div>
   </header>
 
   <main>
@@ -300,12 +308,15 @@
       </div>
     </section>
 
-    <section class="price">
+    <section class="price wrapper">
       <div class="price__wrapper">
         <h2 class="price__title">Цены</h2>
         <p class="price__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
         <div class="price__contact">
           <p class="price__contact-text">Свяжитесь с нами</p>
+          <svg class="price__contact-icon" width="30" height="30">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
           <a class="price__contact-phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
         </div>
       </div>
@@ -342,7 +353,7 @@
       </ul>
     </section>
 
-    <section class="feedback">
+    <section class="feedback wrapper">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="feedback__back"></div>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -358,7 +369,7 @@
       </form>
     </section>
 
-    <footer class="footer">
+    <footer class="footer wrapper">
       <section class="footer__promo">
         <h2 class="footer__title">Следующие путешествия</h2>
         <div class="footer__promo-wrapper">
@@ -420,9 +431,15 @@
         <h2 class="footer__title">Наши контакты</h2>
         <ul class="footer__contacts-list">
           <li class="footer__contacts-item">
+            <svg class="footer__contacts-icon" width="26" height="20">
+              <use xlink:href="#icon-email"></use>
+            </svg>
             <a class="footer__contacts-link footer__contacts-link--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
           </li>
           <li class="footer__contacts-item">
+            <svg class="footer__contacts-icon footer__contacts-icon--phone" width="30" height="30">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
             <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
           </li>
         </ul>
