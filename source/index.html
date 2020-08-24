@@ -344,14 +344,15 @@
 
     <section class="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
+      <div class="feedback__back"></div>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
         <h3 class="feedback__form-title">У Вас остались вопросы?</h3>
         <p class="feedback__form-text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
         <div class="feedback__form-row">
           <label class="visually-hidden" for="phone">Номер телефона</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7 Введите 10 цифр номера" required>
+          <input class="feedback__form-input feedback__form-input--phone" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7  Введите 10 цифр номера" required>
           <label class="visually-hidden" for="phone">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="E-mail">
+          <input class="feedback__form-input" type="email" id="email" name="email" placeholder="E-mail">
         </div>
         <button class="feedback__form-button button" type="submit">отправить</button>
       </form>
@@ -360,63 +361,71 @@
     <footer class="footer">
       <section class="footer__promo">
         <h2 class="footer__title">Следующие путешествия</h2>
-        <ul class="footer__promo-list">
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Марсель</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Ним</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Монпелье</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Барселона</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Пальма</a>
-          </li>
-        </ul>
-        <ul class="footer__promo-list">
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Сардиния</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Палермо</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Катания</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Неаполь</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Рим</a>
-          </li>
-        </ul>
-        <ul class="footer__promo-list">
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Корс</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Ницца</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Монако</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Динь-ле-Бен</a>
-          </li>
-          <li class="footer__promo-item">
-            <a class="footer__promo-link" href="#">Гренобль</a>
-          </li>
-        </ul>
+        <div class="footer__promo-wrapper">
+          <ul class="footer__promo-list">
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Марсель</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Ним</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Монпелье</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Барселона</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Пальма</a>
+            </li>
+          </ul>
+          <ul class="footer__promo-list">
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Сардиния</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Палермо</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Катания</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Неаполь</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Рим</a>
+            </li>
+          </ul>
+          <ul class="footer__promo-list">
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Корс</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Ницца</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Монако</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Динь-ле-Бен</a>
+            </li>
+            <li class="footer__promo-item">
+              <a class="footer__promo-link" href="#">Гренобль</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="footer__contacts">
         <h2 class="footer__title">Наши контакты</h2>
-        <a class="footer__contacts-phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-        <a class="footer__contacts-email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+        <ul class="footer__contacts-list">
+          <li class="footer__contacts-item">
+            <a class="footer__contacts-link footer__contacts-link--email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+          </li>
+          <li class="footer__contacts-item">
+            <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </li>
+        </ul>
       </section>
 
       <section class="footer__corporate">

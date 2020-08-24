@@ -1,22 +1,46 @@
 .price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .price__wrapper {
+  padding-top: 112px;
+  min-width: 300px;
   order: 1;
 }
 
 .price__title {
-  @include clear-intervals(53px);
+  @include clear-intervals(47px);
   @include font(55px, 90px, 0);
   font-weight: 600;
   color: $grey;
 }
 
+.price__text {
+  @include clear-intervals(60px);
+  @include font(16px, 27px, 0);
+  color: $opacity-grey;
+}
+
+.price__contact {
+  padding-left: 45px;
+}
+
+.price__contact-text {
+  @include clear-intervals(13px);
+  @include font(22px, 34px, 0);
+  font-weight: 500;
+  color: $dark-grey;
+}
+
+.price__contact-phone {
+  @include font(20px, 32px, 0);
+  color: $black;
+}
+
 .price__list {
   @include clear-intervals(138px);
+  margin-right: 111px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -48,6 +72,10 @@
     .price__item-text::after {
       background-color: $accent;
       opacity: 0.5;
+    }
+
+    .price__item-item::before {
+      color: $grey;
     }
 
     .price__item-item:first-of-type {
@@ -101,6 +129,8 @@
     width: 14px;
     height: 12px;
     content: "\2713";
+    font-size: 25px;
+    font-weight: 600;
     color: $accent;
   }
 }
