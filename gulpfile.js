@@ -87,7 +87,6 @@ gulp.task('copy', function () {
     'source/img/**',
     'source/js/**',
     'source//*.ico',
-    'source/pixel-glass/**'
   ], {
     base: 'source'
   })

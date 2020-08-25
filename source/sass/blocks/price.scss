@@ -250,3 +250,110 @@
     padding: 17px;
   }
 }
+
+@media (max-width: $mobile-max) {
+  .price {
+    flex-direction: column;
+  }
+
+  .price__wrapper {
+    margin-bottom: 38px;
+    padding-top: 0;
+    order: 0;
+    text-align: center;
+  }
+
+  .price__title {
+    @include font(24px, 36px, 0);
+    margin-bottom: 20px;
+  }
+
+  .price__text {
+    margin-bottom: 19px;
+    padding: 0 20px;
+  }
+
+  .price__contact {
+    padding: 0 20px;
+  }
+
+  .price__contact-text {
+    @include font(18px, 34px, 0);
+    margin-bottom: 10px;
+  }
+
+  .price__contact-icon {
+    display: none;
+  }
+
+  .price__contact-phone {
+    font-size: 18px;
+    text-decoration: underline;
+    color: $accent;
+  }
+
+  .price__list {
+    margin: 0 auto 50px;
+    flex-direction: column;
+  }
+
+  .price__item-list {
+    margin-bottom: 18px;
+  }
+
+  .price__item {
+    width: 288px;
+    min-height: 614px;
+    margin: 0 auto 30px;
+    padding: 30px 18px 0;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &--active {
+      border: 3px solid $accent;
+
+      .price__item-title {
+        @include font(24px, 34px, 0);
+      }
+    }
+  }
+
+  .price__item-title {
+    @include font(24px, 38px, 0);
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price__item-name {
+    margin-bottom: 9px;
+  }
+
+  .price__item-value {
+    @include font(25px, 34px, 0);
+  }
+
+  .price__item-text {
+    margin-bottom: 30px;
+    padding: 0;
+    text-align: center;
+
+    &::after {
+      top: 80px;
+      left: -14px;
+      width: 248px;
+    }
+  }
+
+  .price__item-item {
+    margin-bottom: 10px;
+  }
+
+  .price__item-button {
+    width: 288px;
+    margin-left: -20px;
+    padding: 17px;
+  }
+}

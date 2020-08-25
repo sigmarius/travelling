@@ -329,3 +329,144 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: $mobile-max) {
+  .places {
+    padding-top: 0;
+  }
+
+  .places__title {
+    @include font(24px, 36px, 0);
+    width: auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__slogan {
+    @include font(16px, 28px, -0.47px);
+    width: auto;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .places__preview-list {
+    margin-bottom: 39px;
+    padding: 0 16px;
+  }
+
+  .places__preview-item {
+    margin-bottom: 30px;
+
+    &:nth-last-child(2) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin: auto;
+    }
+  }
+
+  .places__preview-image {
+    width: 288px;
+    height: auto;
+  }
+
+  .places__navigation-list {
+    width: 87%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+
+    &::after {
+      left: 15px;
+      width: 100%;
+    }
+  }
+
+  .places__navigation-item:nth-last-child(-n+3) {
+    display: none;
+  }
+
+  .places__description-list {
+    margin-bottom: 127px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__description-item {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .places__description-wrapper {
+    width: 100%;
+  }
+
+  .places__description-title {
+    @include font(24px, 36px, 0);
+    margin-bottom: 20px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__description-text {
+    margin-bottom: 20px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .places__description-button {
+    width: 288px;
+    display: block;
+    margin: 0 auto 30px;
+    padding: 17px 20px;
+  }
+
+  .places__description-image {
+    min-width: 320px;
+    height: auto;
+  }
+
+  .places__reviews {
+    top: 60%;
+    left: 50%;
+    right: auto;
+    width: 268px;
+    padding: 72px 20px 25px;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  .places__reviews-title {
+    @include font(20px, 24px, -0.69px);
+
+    &::after {
+      top: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .places__reviews-text {
+    margin-bottom: 15px;
+  }
+
+  .places__reviews-user {
+    flex-direction: column;
+  }
+
+  .places__reviews-image {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+}

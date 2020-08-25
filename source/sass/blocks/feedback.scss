@@ -99,10 +99,10 @@
 
   .feedback__back {
     left: 0;
-    min-width: $tablet-min;
+    width: $tablet-min;
     background-image: url("../img/feedback-tablet@1x.jpg");
 
-   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/feedback-tablet@2x.jpg");
     }
   }
@@ -117,5 +117,51 @@
 
   .feedback__form-button {
     width: 250px;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .feedback {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .feedback__back {
+    left: 0;
+    min-width: 320px;
+    background-color: $light-grey;
+    background-image: none;
+  }
+
+  .feedback__form {
+    width: 320px;
+    height: auto;
+    margin: 0;
+    padding: 20px 15px 0;
+    background-color: transparent;
+  }
+
+  .feedback__form-title {
+    margin-bottom: 18px;
+  }
+
+  .feedback__form-row {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .feedback__form-input {
+    &--phone {
+      margin-bottom: 18px;
+    }
+
+    &--email {
+      margin-bottom: 0;
+    }
+  }
+
+  .feedback__form-button {
+    width: 288px;
   }
 }

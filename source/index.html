@@ -9,34 +9,6 @@
   <link rel="preload" href="fonts/montserrat-v14-cyrillic-500.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-v14-cyrillic-600.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url( "pixel-glass/320.png" );
-  }
-  /* Планшет */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Планшетный макет */
-      background-image: url( "pixel-glass/768.png" );
-    }
-  }
-  /* Десктоп */
-  @media ( min-width: 1024px ) {
-    HTML {
-      /* Десктопный макет */
-      background-image: url( "pixel-glass/1920.png" );
-    }
-  }
-</style>
-<link href="pixel-glass/styles.css" rel="stylesheet">
-<script src="pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
-
 </head>
 <body>
 
@@ -49,7 +21,7 @@
         <a class="header__logo">
           <img class="header__logo-image" src="img/logo.svg" width="57" height="22" alt="Логотип проекта Путешествие по Европе">
         </a>
-        <ul class="header__menu">
+        <ul class="header__menu header__menu--closed header__menu--nojs">
           <li class="header__menu-item">
             <a class="header__menu-link" href="#">О путешествии</a>
           </li>
@@ -64,6 +36,9 @@
             </svg>
             +7 (499) -784-684-46</a>
         </div>
+        <button class="header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </nav>
   </header>
 
@@ -363,99 +338,99 @@
           <label class="visually-hidden" for="phone">Номер телефона</label>
           <input class="feedback__form-input feedback__form-input--phone" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+7  Введите 10 цифр номера" required>
           <label class="visually-hidden" for="phone">E-mail</label>
-          <input class="feedback__form-input" type="email" id="email" name="email" placeholder="E-mail">
+          <input class="feedback__form-input feedback__form-input--email" type="email" id="email" name="email" placeholder="E-mail">
         </div>
         <button class="feedback__form-button button" type="submit">отправить</button>
       </form>
     </section>
-
-    <footer class="footer wrapper">
-      <section class="footer__promo">
-        <h2 class="footer__title">Следующие путешествия</h2>
-        <div class="footer__promo-wrapper">
-          <ul class="footer__promo-list">
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Марсель</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Ним</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Монпелье</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Барселона</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Пальма</a>
-            </li>
-          </ul>
-          <ul class="footer__promo-list">
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Сардиния</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Палермо</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Катания</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Неаполь</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Рим</a>
-            </li>
-          </ul>
-          <ul class="footer__promo-list">
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Корс</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Ницца</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Монако</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Динь-ле-Бен</a>
-            </li>
-            <li class="footer__promo-item">
-              <a class="footer__promo-link" href="#">Гренобль</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="footer__contacts">
-        <h2 class="footer__title">Наши контакты</h2>
-        <ul class="footer__contacts-list">
-          <li class="footer__contacts-item">
-            <svg class="footer__contacts-icon" width="26" height="20">
-              <use xlink:href="#icon-email"></use>
-            </svg>
-            <a class="footer__contacts-link footer__contacts-link--email" href="mailto:puteshestviemechta@gmail.ru"><span class="footer__contacts-short-email">Почта</span><span class="footer__contacts-full-email">puteshestviemechta@gmail.ru</span></a>
-          </li>
-          <li class="footer__contacts-item">
-            <svg class="footer__contacts-icon footer__contacts-icon--phone" width="30" height="30">
-              <use xlink:href="#icon-phone"></use>
-            </svg>
-            <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="footer__corporate">
-        <h2 class="footer__title">Корпоративные путешествия</h2>
-        <p class="footer__corporate-text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным времяпрепровождением</p>
-      </section>
-    </footer>
-
   </main>
 
-  <footer>
+  <footer class="footer wrapper">
+    <section class="footer__promo">
+      <h2 class="footer__title">Следующие путешествия</h2>
+      <div class="footer__promo-wrapper">
+        <ul class="footer__promo-list">
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Марсель</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Ним</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Монпелье</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Барселона</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Пальма</a>
+          </li>
+        </ul>
+        <ul class="footer__promo-list footer__promo-list--second">
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Сардиния</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Палермо</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Катания</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Неаполь</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Рим</a>
+          </li>
+        </ul>
+        <ul class="footer__promo-list footer__promo-list--third">
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Корс</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Ницца</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Монако</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Динь-ле-Бен</a>
+          </li>
+          <li class="footer__promo-item">
+            <a class="footer__promo-link" href="#">Гренобль</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <section class="footer__contacts">
+      <h2 class="footer__title">Наши контакты</h2>
+      <ul class="footer__contacts-list">
+        <li class="footer__contacts-item">
+          <svg class="footer__contacts-icon" width="26" height="20">
+            <use xlink:href="#icon-email"></use>
+          </svg>
+          <a class="footer__contacts-link footer__contacts-link--email" href="mailto:puteshestviemechta@gmail.ru"><span class="footer__contacts-short-email">Почта</span><span class="footer__contacts-full-email">puteshestviemechta@gmail.ru</span></a>
+        </li>
+        <li class="footer__contacts-item">
+          <svg class="footer__contacts-icon footer__contacts-icon--phone" width="30" height="30">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          <a class="footer__contacts-link footer__contacts-link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="footer__corporate">
+      <h2 class="footer__title footer__title--corporate">Корпоративные путешествия</h2>
+      <p class="footer__corporate-text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным времяпрепровождением</p>
+    </section>
   </footer>
 
+  <section class="modal modal--form">
+
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

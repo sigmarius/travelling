@@ -1,15 +1,20 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+// отображает меню-гамбургер
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
-});
+(function () {
+  var pageHeader = document.querySelector('.header__menu');
+  var headerToggle = document.querySelector('.header__toggle');
+
+  pageHeader.classList.remove('header__menu--nojs');
+
+  headerToggle.addEventListener('click', function () {
+    if (pageHeader.classList.contains('header__menu--closed')) {
+      pageHeader.classList.remove('header__menu--closed');
+      pageHeader.classList.add('header__menu--opened');
+    } else {
+      pageHeader.classList.add('header__menu--closed');
+      pageHeader.classList.remove('header__menu--opened');
+    }
+  });
+})();

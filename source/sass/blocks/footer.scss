@@ -103,7 +103,7 @@
     flex-wrap: wrap;
   }
 
-  .footer__promo  {
+  .footer__promo {
     width: 50%;
     padding-left: 21px;
 
@@ -136,5 +136,98 @@
 
   .footer__corporate-text {
     padding: 0 30px 0;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__promo,
+  .footer__contacts,
+  .footer__corporate {
+    width: 100%;
+  }
+
+  .footer__title {
+    padding-right: 10px;
+    text-align: center;
+
+    &--corporate {
+      padding-right: 0;
+    }
+  }
+
+  .footer__promo {
+    padding: 0;
+
+    &::after {
+      left: 11px;
+      right: 11px;
+      top: auto;
+      bottom: -11px;
+      min-width: 288px;
+      width: auto;
+      height: 1px;
+    }
+  }
+
+  .footer__promo-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__promo-list {
+    width: 50%;
+    text-align: center;
+
+    &--second {
+      padding-right: 20px;
+    }
+
+    &--third {
+      padding: 10px 14px 0 0;
+    }
+  }
+
+  .footer__contacts {
+    margin-bottom: 22px;
+    padding: 40px 0 0;
+
+    &::after {
+      left: 11px;
+      right: 11px;
+      top: auto;
+      bottom: 5px;
+      min-width: 288px;
+      width: auto;
+      height: 1px;
+    }
+  }
+
+  .footer__contacts-list {
+    padding-right: 10px;
+  }
+
+  .footer__contacts-item {
+    justify-content: center;
+  }
+
+  .footer__contacts-short-email {
+    display: inline;
+  }
+
+  .footer__contacts-full-email {
+    display: none;
+  }
+
+  .footer__corporate {
+    padding: 0;
+    text-align: center;
+  }
+
+  .footer__corporate-text {
+    padding: 0 15px;
   }
 }

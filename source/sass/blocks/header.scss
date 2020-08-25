@@ -41,6 +41,10 @@
   fill: none;
 }
 
+.header__toggle {
+  display: none;
+}
+
 @media (min-width: $tablet-min) and (max-width: $tablet-max) {
   .header__logo {
     width: 44px;
@@ -48,12 +52,113 @@
   }
 
   .header__nav {
-    min-height: 50px;
+    position: relative;
+    min-height: 49px;
     padding-left: 21px;
+  }
+
+  .header__contacts {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .header__logo {
+    width: 44px;
+    height: 17px;
+  }
+
+  .header__nav {
+    min-height: 48px;
+    padding-left: 14px;
+    padding-top: 5px;
   }
 
   .header__menu,
   .header__contacts {
     display: none;
+  }
+}
+
+@media (max-width: $tablet-max) {
+  .header__menu--closed.header__menu {
+    display: none;
+  }
+
+  .header__menu--opened.header__menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    min-width: $tablet-min;
+    height: 344px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    .header__menu-item {
+      padding: 24px;
+      background-color: $light-grey;
+    }
+  }
+
+  .header__menu--opened ~ .header__toggle {
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 52px;
+    background-color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 20px;
+      right: 4px;
+      z-index: 1;
+
+      width: 25px;
+      height: 2px;
+
+      background-color: $grey;
+      opacity: 0.2;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .header__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72px;
+    height: 50px;
+    display: block;
+    background-color: $accent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 11px;
+      right: 22px;
+
+      width: 25px;
+      height: 2px;
+
+      background-color: $white;
+      box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+    }
   }
 }
