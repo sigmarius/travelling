@@ -90,3 +90,32 @@
   display: block;
   border: none;
 }
+
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .feedback {
+    margin-bottom: 80px;
+    justify-content: center;
+  }
+
+  .feedback__back {
+    left: 0;
+    min-width: $tablet-min;
+    background-image: url("../img/feedback-tablet@1x.jpg");
+
+   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/feedback-tablet@2x.jpg");
+    }
+  }
+
+  .feedback__form {
+    margin: 0 auto;
+  }
+
+  .feedback__form-row {
+    margin-bottom: 20px;
+  }
+
+  .feedback__form-button {
+    width: 250px;
+  }
+}
